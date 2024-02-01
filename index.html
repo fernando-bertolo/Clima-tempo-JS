@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Clima Tempo</title>
+</head>
+<body>
+    <main class="container">
+        <h3 class="container__title"> Veja o clima da sua cidade</h3>
+        <form class="container__form">
+            <input type="text" id="input-formulario" placeholder="Digite a cidade">
+            <button class="container__form_button">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+
+        <div class="weather">
+            <div class="weather__location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="city">Florida</span>
+            </div>
+            <div class="weather__temperature">
+                <i class="fa-solid fa-temperature-three-quarters"></i>
+                <p><span id="temperature">38</span>&deg;C</p>
+            </div>
+            <div class="weather__clima">
+                <span id="clima">Nublado</span>
+                <i class="fa-solid fa-cloud"></i>
+            </div>
+
+            <div class="weather__data">
+                <div class="weather__data__umity">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>8%</span>
+                </div>
+                <div class="weather__data__velocity">
+                    <i class="fa-solid fa-wind"></i>
+                    <span>10km/h</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
