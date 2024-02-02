@@ -48,7 +48,7 @@ body {
     /* background-color: red; */
 }
 
-#input-formulario{
+#input-city{
     height: 100%;
     width: 80%;
     border-radius: 5px;
@@ -56,7 +56,7 @@ body {
     padding: 0 0 0 1rem;
 }
 
-#input-formulario:focus{
+#input-city:focus{
     outline: none;
 }
 
