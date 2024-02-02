@@ -9,7 +9,7 @@
 </head>
 <body>
     <main class="container">
-        <h3 class="container__title"> Veja o clima da sua cidade</h3>
+        <h2 class="container__title">Previsão do Tempo</h2>
         <form class="container__form">
             <input type="text" id="input-city" placeholder="Digite a cidade">
             <button class="container__form_button" id="search">
@@ -18,29 +18,34 @@
         </form>
 
         <div class="weather">
+
             <div class="weather__location">
-                <i class="fa-solid fa-location-dot"></i>
-                <span id="city">Florida</span>
+                <i class="fa-solid fa-location-dot" id="icone-location"></i>
+                <span id="city">Cidade</span>
             </div>
+
             <div class="weather__temperature">
                 <i class="fa-solid fa-temperature-three-quarters"></i>
-                <p><span id="temperature">38</span>&deg;C</p>
+                <p><span id="temperature">0</span>&deg;C</p>
             </div>
+
             <div class="weather__clima">
-                <span id="weather__clima__description">Nublado</span>
-                <i class="fa-solid fa-cloud"></i>
+                <span id="weather__clima__description">Clima</span>
+                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="condições climaticas" id="weather__icon">
             </div>
 
             <div class="weather__data">
                 <div class="weather__data__umity">
                     <i class="fa-solid fa-droplet"></i>
-                    <span id="umidity">8%</span>
+                    <span id="humidity">0%</span>
                 </div>
-                <div class="weather__data__velocity">
+
+                <div class="weather__data__wind">
                     <i class="fa-solid fa-wind"></i>
-                    <span id="wind">10km/h</span>
+                    <span id="wind">0km/h</span>
                 </div>
             </div>
+
         </div>
     </main>
     <script src="./scripts/index.js" defer></script>

@@ -36,12 +36,14 @@ body {
 }
 
 .container__title{
-    
+    text-align: center;
+    width: 90%;
 }
+
 
 .container__form{
     display: flex;
-    margin-top: 1rem;
+    margin-top: 2rem;
     gap: 1rem;
     height: 10%;
     width: 90%;
@@ -74,8 +76,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 1rem 0 0 0;
-    margin-top: 1rem;
+    padding: 1.5rem 0 0 0;
+    margin-top: 2rem;
     border-top: 1px solid black;
     /* background-color: aqua; */
     gap: 1rem;
@@ -84,7 +86,18 @@ body {
 .weather__location{
     display: flex;
     gap: 1rem;
-    /* background-color: antiquewhite; */
+    width: 40%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+#icone-location{
+    width: 50px;
+    height: 30px;
+}
+#city{
+    font-size: 1.5rem;
 }
 
 .weather__temperature{
@@ -95,21 +108,47 @@ body {
 .weather__clima{
     display: flex;
     gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+}
+#weather__clima__description{
+    font-size: 1.1rem;
 }
 
 .weather__data{
-    /* background-color: gray; */
-    width: 70%;
+    width: 80%;
+    height: 30%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .weather__data__umity{
     width: 50%;
+    height: 100%;
     border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
-.weather__data__velocity{
-    width: 50%;
-    padding-left: 1rem;
+#humidity{
+    font-size: 1.2rem;
 }
+
+.weather__data__wind{
+    width: 50%;
+    height: 100%;
+    padding-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#wind{
+    font-size: 1.2rem;
+}
+

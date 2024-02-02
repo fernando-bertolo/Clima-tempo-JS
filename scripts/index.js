@@ -11,30 +11,37 @@ const inputCity = document.getElementById("input-city");
 const city = document.getElementById("city");
 const temperature = document.getElementById("temperature");
 const clima = document.getElementById("weather__clima__description");
-const umidity = document.getElementById("umidity");
+const humidity = document.getElementById("humidity");
 const wind = document.getElementById("wind");
+const weather__icon = document.getElementById("weather__icon");
 
 
 //funções
 
-const getWeatherData = async (city) => {
-    const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=pt_br`;
+const getWeatherData = async (cityName) => {
+    const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric&lang=pt_br`;
 
-    const res = fetch(apiURL);
+    const res = await fetch(apiURL);
     const data = await res.json();
-
-    console.log(data);
+    return data;
 }
 
-function showWeatherData(city){
-    getWeatherData(city)
+const showWeatherData = async (cityName) => {
+    const data = await getWeatherData(cityName)
+    city.innerText = data.name;
+    temperature.innerText = parseInt(data.main.temp);
+    clima.innerText = data.weather[0].description;
+    humidity.innerText = data.main.humidity + "%";
+    wind.innerText = data.wind.speed + " Km/h";
+    weather__icon.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
 }
+
 
 //event
 
 buttonSearch.addEventListener("click", (e) => {
     e.preventDefault();
     
-    const city = inputCity.value;
-    showWeatherData(city)
+    const cityName = inputCity.value;
+    showWeatherData(cityName)
 })
