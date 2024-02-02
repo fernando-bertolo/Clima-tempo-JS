@@ -14,6 +14,8 @@ const clima = document.getElementById("weather__clima__description");
 const humidity = document.getElementById("humidity");
 const wind = document.getElementById("wind");
 const weather__icon = document.getElementById("weather__icon");
+const flagCountry = document.getElementById("flagCountry");
+const weather__temperature = document.getElementById("weather__temperature");
 
 
 //funções
@@ -34,14 +36,22 @@ const showWeatherData = async (cityName) => {
     humidity.innerText = data.main.humidity + "%";
     wind.innerText = data.wind.speed + " Km/h";
     weather__icon.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
+    flagCountry.setAttribute("src", `https://flagsapi.com/${data.sys.country}/flat/64.png`)
+
 }
 
+function verifyCity(cityName) {
+    if (cityName.length > 8){
+        weather__temperature.style.marginTop = "0.8rem";
+    }
+}
 
 //event
-
 buttonSearch.addEventListener("click", (e) => {
     e.preventDefault();
-    
+
+
     const cityName = inputCity.value;
+    verifyCity(cityName)
     showWeatherData(cityName)
 })

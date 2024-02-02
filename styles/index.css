@@ -5,6 +5,8 @@
     --second-color: #87C4FF;
 }
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -33,6 +35,34 @@ body {
     box-sizing: border-box;
     padding: 1rem 0 0 2rem;
 
+
+    @media (max-width: 600px) {
+        height: 60%;
+        width: 70%;
+    }
+
+    @media (min-width: 600px) {
+        width: 70%;
+        height: 60%;
+    }
+
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+
+    @media (min-width: 992px) {
+        width: 40%;
+    }
+
+    @media (min-width: 1200px) {
+        width: 30%;
+    }
+
+    @media (min-width: 1400px){
+        height: 50%;
+    }
+
+
 }
 
 .container__title{
@@ -47,7 +77,6 @@ body {
     gap: 1rem;
     height: 10%;
     width: 90%;
-    /* background-color: red; */
 }
 
 #input-city{
@@ -67,6 +96,7 @@ body {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    background-color: var(--color-primary);
 }
 
 .weather{
@@ -76,33 +106,62 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 1.5rem 0 0 0;
+    padding: 1rem 0 0 0;
     margin-top: 2rem;
     border-top: 1px solid black;
-    /* background-color: aqua; */
     gap: 1rem;
+
+    @media (max-width: 600px) {
+        gap: 0.5rem;
+    }
 }
 
 .weather__location{
     display: flex;
     gap: 1rem;
-    width: 40%;
+    width: 100%;
     height: 20%;
     justify-content: center;
     align-items: center;
 }
+.weather__location h2 {
+    text-align: center;
+}
+
+#flagCountry{
+    @media (max-width: 480px) {
+       display: none;
+    }
+}
 
 #icone-location{
-    width: 50px;
-    height: 30px;
+    width: 2rem;
+    height: 2rem;
 }
 #city{
     font-size: 1.5rem;
 }
 
-.weather__temperature{
+#weather__temperature{
     display: flex;
     gap: 1rem;
+}
+
+#weather__temperature i{
+    font-size: 1.5rem;
+
+    @media (max-width: 600px) {
+        font-size: 1.2rem;
+    }
+}
+
+#weather__temperature p{
+    text-align: center;
+    font-size: 1.5rem;
+
+    @media (max-width: 600px) {
+        font-size: 1.2rem;
+    }
 }
 
 .weather__clima{
@@ -111,6 +170,11 @@ body {
     justify-content: center;
     align-items: center;
     padding-left: 2rem;
+
+    @media (max-width: 600px) {
+        height: 30%;
+        width: 100%;
+    }
 }
 #weather__clima__description{
     font-size: 1.1rem;
@@ -118,10 +182,20 @@ body {
 
 .weather__data{
     width: 80%;
-    height: 30%;
+    height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 600px) {
+        height: 20%;
+        width: 100%;
+    }
+
+
+    @media (min-width: 1200px) {
+        width: 100%;
+    }
 }
 
 .weather__data__umity{
@@ -136,6 +210,11 @@ body {
 
 #humidity{
     font-size: 1.2rem;
+
+
+    @media (max-width: 600px) {
+        font-size: 1rem;
+    }
 }
 
 .weather__data__wind{
@@ -150,5 +229,9 @@ body {
 
 #wind{
     font-size: 1.2rem;
+
+    @media (max-width: 600px) {
+        font-size: 1rem;
+    }
 }
 
