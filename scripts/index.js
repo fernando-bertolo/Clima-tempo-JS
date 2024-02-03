@@ -16,7 +16,7 @@ const wind = document.getElementById("wind");
 const weather__icon = document.getElementById("weather__icon");
 const flagCountry = document.getElementById("flagCountry");
 const weather__temperature = document.getElementById("weather__temperature");
-
+const body = document.getElementById("body");
 
 //funções
 
@@ -46,6 +46,21 @@ function verifyCity(cityName) {
     }
 }
 
+function backgroundImage(){
+    const url = "https://source.unsplash.com/random/?mountain";
+    fetch(url)
+        .then(response => response.url)
+        .then(url => {
+            body.style.backgroundImage = `url(${url})`;
+            body.style.backgroundSize = "cover";    
+            console.log("Requisição da imagem feita com sucesso")
+        })
+        .catch(error =>  {
+            console.log("Erro na requisição da imagem");
+        })
+
+}
+
 //event
 buttonSearch.addEventListener("click", (e) => {
     e.preventDefault();
@@ -53,5 +68,6 @@ buttonSearch.addEventListener("click", (e) => {
 
     const cityName = inputCity.value;
     verifyCity(cityName)
+    backgroundImage();
     showWeatherData(cityName)
 })
