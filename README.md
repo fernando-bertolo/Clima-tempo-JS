@@ -5,3 +5,10 @@
 > Para a consulta de informações sobre a previsão do tempo, foi utilizado a API pública disponível no link https://openweathermap.org/api
 
 > Para melhorar a experîencia, foi utilizado também uma API que disponibiliza as bandeiras dos países, que esta disponível no link https://flagsapi.com/
+
+
+O Deploy da aplicação foi feito no https://www.netlify.com/ e esta disponível publicamente no link abaixo.
+
+```
+https://prevision-weather.netlify.app/
+```
